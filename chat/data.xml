@@ -1,0 +1,6 @@
+<ServerInfo>
+  <Host>localhost</Host>
+  <Port>5432</Port>
+  <DBHost>localhost</DBHost>
+  <DBPort>1527</DBPort>
+</ServerInfo>
