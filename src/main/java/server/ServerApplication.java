@@ -106,8 +106,4 @@ public class ServerApplication {
 	public static List<String> getLogins() {
 		return logins;
 	}
-
-	public static void setLogins(List<String> logins) {
-		ServerApplication.logins = logins;
-	}
 }

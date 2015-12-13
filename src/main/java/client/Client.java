@@ -1,5 +1,8 @@
 package client;
 
+import xml.XmlParser;
+
+import javax.swing.*;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -7,10 +10,6 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javax.swing.JOptionPane;
-
-import xml.XmlParser;
 
 public class Client {
 	private static Socket requestSocket;
@@ -24,10 +23,6 @@ public class Client {
 
 	public static String getClientLogin() {
 		return clientLogin;
-	}
-
-	public static void setClientLogin(String login) {
-		clientLogin = login;
 	}
 
 	private static boolean loginIsValid = true;
@@ -61,32 +56,12 @@ public class Client {
 		return listener;
 	}
 
-	public void setListener(ClientListener listener) {
-		this.listener = listener;
-	}
-
-	public static int getPort() {
-		return port;
-	}
-
-	public static void setPort(int port) {
-		Client.port = port;
-	}
-
 	public static ObjectInputStream getIn() {
 		return in;
 	}
 
 	public static void setIn(ObjectInputStream in) {
 		Client.in = in;
-	}
-
-	public static String getHost() {
-		return host;
-	}
-
-	public static void setHost(String host) {
-		Client.host = host;
 	}
 
 	public Client(ClientListener listener) {

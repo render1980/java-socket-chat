@@ -1,17 +1,17 @@
 package client;
 
+import command.ICommand;
+
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import command.ICommand;
 
 public class ClientSender {
 
 	private static Logger logger = Logger.getLogger(ClientSender.class.getName());
 	
 	public static void sendMessage(final String msg) {
-		ICommand command = CommandParser.getCommand(msg, Client.getClientLogin());
+		ICommand command = CommandParser.getCommand(msg);
 		try {
 			Client.getOut().writeObject(command);
 			Client.getOut().flush();

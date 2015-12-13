@@ -11,12 +11,10 @@ import command.SendPrivateMessageCommand;
 
 public final class CommandParser {
 
-	private CommandParser() {
+	private CommandParser() {}
 
-	}
-
-	public static ICommand getCommand(String message, String login) {
-		ICommand myCommand = null;
+	public static ICommand getCommand(String message) {
+		ICommand myCommand;
 		String[] args = message.split(" ");
 		if (args[0].equals("chroom")) {
 			myCommand = new ChangeRoomCommand(Integer.parseInt(args[1]));

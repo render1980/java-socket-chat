@@ -1,12 +1,12 @@
 package server;
 
+import xml.XmlParser;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import xml.XmlParser;
 
 public class ServerHandler {
 	private static Logger logger = Logger.getLogger(MessageDBAdapter.class.getName());
@@ -21,9 +21,6 @@ public class ServerHandler {
 		} catch (IOException e) {
 			logger.log(Level.WARNING, e.getMessage(), e);
 		}
-		
-		ConnectionsPool.getInstance();
-
 		while (true) {
 			try {
 				Socket socket = ss.accept();
